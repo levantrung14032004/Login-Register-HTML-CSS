@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+body {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("/asset/background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header .logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+header .navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+header .navigation a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 6px;
+    left: 0;
+    bottom: -6px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+header .navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+header .btnLgn-popup {
+    height: 50px;
+    width: 130px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-left: 40px;
+    font-weight: 500;
+    color: #fff;
+    transition: .4s;
+}
+
+header .btnLgn-popup:hover {
+    background: #fff;
+    color: #162938;
+}
+
+/* Wrapper */
+.wrapper {
+    top: 168px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 440px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+
+.icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    background: #162938;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom-left-radius: 18px;
+}
+.edit-box {
+    margin-left: -26px;
+}
+
+.form-box.login {
+    /* transform: translateX(-300px) */
+}
+
+.login {
+    width: 100%;
+    padding: 30px;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #162938;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+.form-after-H2 {
+    overflow: hidden;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+
+
+.input-box label {
+    position: absolute;
+    left: 5px;
+    transform: translateY(8px);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -20px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 110%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 32px 0 8px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #162938;
+}
+
+
+input[type="email"] {
+    position: absolute;
+    left: 0px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color:#162938;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    color: #162938;
+    margin-right: 4px;
+}
+
+.remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    margin-top: 16px;
+    color: #fff;
+    background: #162938;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    border-radius: 8px;
+}
+
+.login-register {
+    color: #162938;
+    margin: 20px 0 30px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.login-register p a {
+    color: #162938;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+.open-modal {
+    display: none;
+}
